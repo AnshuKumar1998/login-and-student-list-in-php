@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Modal</title>
+    <link rel="stylesheet" href="modelstyle.css">
+</head>
+<body>
+
+<!-- Modal for adding a student -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Add New Student</h2>
+        <form id="addForm" action="add_student.php" method="POST">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="input-group">
+                <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="input-group">
+                <input type="number" name="marks" placeholder="Marks" required>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">Add</button>
+                <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function closeModal() {
+        document.getElementById('addModal').style.display = 'none';
+    }
+</script>
+</body>
+</html>
